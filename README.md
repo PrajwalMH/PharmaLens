@@ -1,121 +1,128 @@
-# 💊 PharmaLens — AI-powered Prescription Analyzer & Interaction Checker
+# 🏥 TriagePro
 
-PharmaLens is a full-stack healthcare application that helps clinicians and patients quickly parse prescriptions, generate clear medication instructions, and flag possible drug interactions using lightweight AI/NLP techniques.
+A **full-stack AI-powered patient triage & appointment booking system** built with:
+
+- 🧩 **Spring Boot + MySQL** for backend APIs & database
+- ⚡ **Next.js + Tailwind CSS** for modern responsive frontend
+- 🤖 **Python Flask microservice** for AI-based triage prediction
 
 ---
 
 ## 🚀 Features
-- ✅ AI-driven parsing of free-text prescriptions
-- ✅ Highlights possible drug interactions (e.g., Warfarin + Ibuprofen bleeding risk)
-- ✅ Summarizes clear patient instructions
-- ✅ Stores a secure history of past prescriptions & analysis
-- ✅ Download prescriptions as CSV reports
-- ✅ Fully responsive UI, works on mobile and desktop
-- ✅ Toast notifications for success & error feedback
+
+✅ **Smart Symptom Triage**  
+- Predicts department & urgency level (LOW / MEDIUM / HIGH) from user input using AI.
+
+✅ **Interactive Dashboard**  
+- Shows all triage logs in a table.
+- Live filters and pie chart visualization.
+
+✅ **Appointment Booking**  
+- Book slots with a doctor based on triage outcome.
+
+✅ **Modern UI**  
+- Animated splash screen, smooth transitions, active nav links.
 
 ---
 
-## ⚙️ Tech Stack
-| Layer         | Technology                     |
-|---------------|--------------------------------|
-| 🐬 Database   | MySQL                          |
-| ☕ Backend    | Spring Boot (Java) + JPA       |
-| 🐍 AI/NLP     | Python Flask microservice      |
-| ⚛️ Frontend   | Next.js (React)                |
+## 🏗️ Tech Stack
+
+| Layer    | Technologies                       |
+|----------|------------------------------------|
+| Frontend | Next.js, Tailwind CSS, Chart.js    |
+| Backend  | Spring Boot, MySQL                 |
+| AI       | Python Flask microservice          |
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ How to Run This Project
 
 ### 📦 Clone the repository
+
 ```bash
-git clone https://github.com/yourusername/pharmalens.git
-cd pharmalens
+git clone https://github.com/yourusername/TriagePro.git
+cd TriagePro
 ```
 
 ---
 
-### ⚙️ 1. Set up MySQL
-Create a database:
-```sql
-CREATE DATABASE pharmalens;
+### 🚀 Start the Spring Boot backend
+
+✅ Make sure your **MySQL server is running** and database `triagepro_db` exists.
+
+```bash
+cd TriagePro-Backend
+./mvnw spring-boot:run
 ```
-Ensure your Spring Boot `application.properties` points to:
+
+or on Windows:
+
+```bash
+mvnw.cmd spring-boot:run
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/pharmalens
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-```
+
+📌 Backend runs on: **http://localhost:8080**
 
 ---
 
-### 🐍 2. Run Python Flask microservice
+### 🤖 Start the AI microservice (Flask)
+
 ```bash
-cd pharmalens-ai
-python -m venv venv
-source venv/bin/activate  # on Windows: venv\Scripts\activate
-pip install flask
+cd TriagePro-AI
 python app.py
 ```
-Runs on: **http://localhost:5000**
+
+📌 AI microservice runs on: **http://localhost:5000**
 
 ---
 
-### ☕ 3. Run Spring Boot backend
-```bash
-cd pharmalens-backend
-mvn spring-boot:run
-```
-Runs on: **http://localhost:8080**
+### 🌐 Start the Next.js frontend
 
----
-
-### ⚛️ 4. Run Next.js frontend
 ```bash
-cd pharmalens-ui
+cd TriagePro-Frontend
 npm install
 npm run dev
 ```
-Runs on: **http://localhost:3000**
+
+📌 Frontend runs on: **http://localhost:3000**
 
 ---
 
 ## 📝 Example Inputs
-Try pasting these into your dashboard textarea:
 
-```
-Take Amoxicillin 500mg twice daily after food. Ibuprofen as needed for pain. Also take Aspirin 81mg daily.
-```
-
-or
-
-```
-Patient is advised to take Ibuprofen 400mg every 6 hours if pain persists, along with Aspirin 81mg daily for heart protection.
-```
-
-Watch it generate summaries & flag interactions like:
-```
-Ibuprofen + Aspirin may increase bleeding risk.
-```
+| Symptom Input                                      | Predicted Output                          |
+|----------------------------------------------------|------------------------------------------|
+| `I have chest pain and shortness of breath`        | 🔥 HIGH — Cardiology                     |
+| `I have fever and a little cough`                  | 🟡 MEDIUM — General Medicine             |
+| `Just feeling a bit tired with mild headache`      | 🟢 LOW — General Medicine                |
+| `Sudden onset of chest tightness`                  | 🔥 HIGH — Cardiology                     |
 
 ---
 
-## 🚀 Future Enhancements
-- 🌐 Integrate with real medical knowledge bases (DrugBank / UMLS)
-- 🤖 Switch from rule-based to ML models for smarter NLP
-- 🔐 Add user authentication for multi-doctor, multi-patient support
-- 📊 Build charts to analyze common drug combinations and risks
+## 📸 Screenshots Gallery
+
+<p align="center">
+  <img src="./TriagePro-Frontend/screenshots/dashboard.png" width="400"/>
+  <img src="./TriagePro-Frontend/screenshots/symptoms.png" width="400"/>
+  <img src="./TriagePro-Frontend/screenshots/booking.png" width="400"/>
+</p>
+
+✅ Add as many images as you want.  
+Ensure they are all stored under `TriagePro-Frontend/screenshots/`.
 
 ---
 
-## 🙌 Contributing
-Pull requests and ideas are welcome! Please open an issue or submit a PR.
+## 📝 Future Enhancements
+
+- 🩺 Use a real trained ML model with TensorFlow / Scikit-Learn.
+- 📅 Integrate a calendar view for appointments.
+- 🔔 Email / SMS notifications to patients.
+- 🔒 Add authentication for patients & doctors.
 
 ---
 
-## 🚀 Author
-Developed by **Prajwal Mrithyunjay Hulamani**.
+## 👨‍💻 Author
 
----
-
-### 🎯 Happy analyzing with **PharmaLens**!
+**Prajwal Mrithyunjay Hulamani**  
+- [GitHub](https://github.com/yourusername)  
+- [LinkedIn](https://linkedin.com/in/yourprofile)
