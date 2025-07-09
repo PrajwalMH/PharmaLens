@@ -108,11 +108,6 @@ Ibuprofen + Aspirin may increase bleeding risk.
 
 ---
 
-## 📄 License
-This project is open-source under the MIT License.
-
----
-
 ## 🙌 Contributing
 Pull requests and ideas are welcome! Please open an issue or submit a PR.
 
