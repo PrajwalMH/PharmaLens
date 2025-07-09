@@ -114,7 +114,7 @@ Pull requests and ideas are welcome! Please open an issue or submit a PR.
 ---
 
 ## 🚀 Author
-Developed by **Your Name**.
+Developed by **Prajwal Mrithyunjay Hulamani**.
 
 ---
 
