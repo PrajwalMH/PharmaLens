@@ -29,11 +29,12 @@ PharmaLens is a full-stack healthcare application that helps clinicians and pati
 > 📷 Add your screenshots here.  
 > Example below shows multiple images aligned side by side.
 
+
 <p align="center">
-  <img src="https://via.placeholder.com/350x200?text=Dashboard" alt="Dashboard Screenshot" width="350"/>
-  <img src="https://via.placeholder.com/350x200?text=CSV+Export" alt="CSV Export Screenshot" width="350"/>
-  <img src="https://via.placeholder.com/350x200?text=Mobile+View" alt="Mobile Screenshot" width="350"/>
+  <img src="PharmaLens%20Photos/1.jpg" alt="PharmaLens Screenshot 1" width="350"/>
+  <img src="PharmaLens%20Photos/2.jpg" alt="PharmaLens Screenshot 2" width="350"/>
 </p>
+
 
 ---
 
